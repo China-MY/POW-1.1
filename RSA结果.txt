@@ -1,0 +1,52 @@
+D:\PROJECT\Web3\1.1>py rsa_signature.py
+=== RSA数字签名演示 ===
+使用昵称: China-MY
+
+🔑 生成RSA密钥对...
+✅ RSA密钥对生成成功！
+私钥 (PEM格式):
+-----BEGIN PRIVATE KEY-----
+MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC6aeBQolkafEHz
+wZog7Xd/jWFchvnz7GpyOhNz36rnmhhT26wz+tcyjTSQSL9llRxJZc7eZmwOlX51
+SthcKD20W7URoj72A5r3bXNj4cZdBC7YaG9lpA3WfZ...
+
+公钥 (PEM格式):
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAumngUKJZGnxB88GaIO13
+f41hXIb58+xqcjoTc9+q55oYU9usM/rXMo00kEi/ZZUcSWXO3mZsDpV+dUrYXCg9
+tFu1EaI+9gOa921zY+HGXQQu2GhvZaQN1n2etjjJH8XFHjWNg2Pt6dvAYnqQAvj2
++SE2Auo3rDeLCEFD1u26qxno50Joawa5gJR+QEP/4i7hCOl+t+ul6Bm9SwJIMyG0
+nM3j+N/vxMUV5GMMYAH9dYSBbz+WJkClayDJj4zPHSM7T+SoMxjVZ0r9UOwSJaSe
+n8gSuzeIX6mj28t4L0pU/ewe+2K48wGM6Ska6KCOVAiLjFlJPr3m9s/AtByf8R+k
+mwIDAQAB
+-----END PUBLIC KEY-----
+
+
+🔍 寻找满足POW条件的哈希值（4个0开头）...
+✅ 找到满足条件的哈希值！
+花费时间: 0.0584 秒
+Nonce值: 117988
+Hash内容: China-MY117988
+Hash值: 00001f59a73d60e2eeca0652903cedd6343dd81dec500bd0d2611877d10d7053    
+
+✍️ 使用私钥对消息进行数字签名...
+✅ 数字签名完成！
+签名长度: 256 字节
+签名 (十六进制): 22609b030a1f52bbb142cb76875e93e635ea83b451512ee6bb116bdcbff4a0ada63ae719fd5b18a3d1b720b7c387158ede6c...
+
+🔍 使用公钥验证数字签名...
+✅ 签名验证成功！消息完整性和身份认证通过。
+
+🧪 测试篡改检测...
+✅ 篡改检测成功！修改后的消息验证失败，证明签名机制有效。
+
+📋 RSA数字签名演示总结:
+1. 成功生成2048位RSA密钥对
+2. 找到POW条件的消息: China-MY117988
+3. 对应的SHA256哈希值: 00001f59a73d60e2eeca0652903cedd6343dd81dec500bd0d2611877d10d7053
+4. 私钥签名验证: 通过
+5. 篡改检测: 有效
+
+💾 密钥已保存到文件:
+- private_key.pem (私钥)
+- public_key.pem (公钥)
